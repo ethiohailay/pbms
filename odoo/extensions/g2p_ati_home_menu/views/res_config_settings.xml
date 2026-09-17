@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_res_config_settings_g2p_home_menu_form" model="ir.ui.view">
+        <field name="name">res.config.settings.g2p.home.menu.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="active" eval="False"/>
+        <field name="inherit_id" ref="muk_web_theme.view_res_config_settings_colors_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[field[@name='theme_background_image']]" position="after">
+                <setting
+                    string="G2P Home Menu Image"
+                    company_dependent="1"
+                    help="Set the background image for the G2P home menu"
+                >
+                    <field name="g2p_home_menu_background_image" widget="image" class="ml-4 w-75"/>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
